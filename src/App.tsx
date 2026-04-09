@@ -360,23 +360,13 @@ export default function App() {
         </div>
         <Section title="Нюансы измерения: Перегруз детектора" icon={Info} className="bg-slate-50 border-slate-200">
           <div className="space-y-8">
-            {/* Point 1 */}
-            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-              <h4 className="font-bold text-emerald-900 mb-3 flex items-center gap-2 text-lg">
-                🎯 1. Проблема соотношения Пика и Маркера
-              </h4>
-              <p className="text-slate-600 leading-relaxed">
-                Пик библиотеки (~28 RFU) выше верхнего маркера 1000 bp (~25 RFU). В системах капиллярного электрофореза (Qsep, Bioanalyzer, TapeStation) нижний и верхний маркеры выполняют роль внутренних стандартов. Прибор знает их точную концентрацию. Если сигнал вашего образца перекрывает сигнал маркера, вы выходите за пределы линейного динамического диапазона детектора.
-              </p>
-            </div>
-
             {/* Point 2 */}
             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
               <h4 className="font-bold text-emerald-900 mb-3 flex items-center gap-2 text-lg">
-                🎯 2. Природа странной нижней линии (Baseline / Threshold)
+                Природа странной нижней линии (Baseline / Threshold)
               </h4>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Из-за того, что в капилляр зашел гигантский объем ДНК, интеркалирующего красителя связалось слишком много.
+                Из-за того, что интеркалирующего красителя связалось слишком много мы получили два взаимосвязанных эффекта:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-emerald-50/50 p-4 rounded-lg border border-emerald-100">
@@ -385,7 +375,7 @@ export default function App() {
                     Засвет (Bleed-through)
                   </h5>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Когда этот огромный сгусток ДНК проходит через лазер, он дает такой мощный всплеск флуоресценции, что возникает оптический засвет (background fluorescence ползет вверх вместе с пиком).
+                    Когда внесенное количество ДНК проходит через лазер, он дает такой мощный всплеск флуоресценции, что возникает оптический засвет (background fluorescence ползет вверх вместе с пиком).
                   </p>
                 </div>
                 <div className="bg-emerald-50/50 p-4 rounded-lg border border-emerald-100">
@@ -403,7 +393,7 @@ export default function App() {
             {/* Point 3 */}
             <div className="bg-emerald-900 text-white p-8 rounded-2xl shadow-lg">
               <h4 className="font-bold mb-6 flex items-center gap-2 text-xl">
-                🎯 3. Правильное решение
+                🎯 Правильное решение
               </h4>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
