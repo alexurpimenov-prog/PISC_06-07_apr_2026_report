@@ -107,8 +107,8 @@ export default function App() {
   ];
 
   const manuals = [
-    { name: "LP", file: "/Celemics_LP_Illumina_DNA_ep_short_CD,UD_NormalizeX_bead pooling_enhanced.pdf" },
-    { name: "TE", file: "/Celemics_TE_Illumina_DNA_ep_short_CD,UD_NormalizeX_bead pooling_enhanced.pdf" }
+    { name: "LP", file: "/Celemics_LP_Illumina_DNA_ep_short_CD_UD_NormalizeX_bead pooling_enhanced.pdf" },
+    { name: "TE", file: "/Celemics_TE_Illumina_DNA_ep_short_CD_UD_NormalizeX_bead pooling_enhanced.pdf" }
   ];
 
   const [showManualsMenu, setShowManualsMenu] = useState(false);
