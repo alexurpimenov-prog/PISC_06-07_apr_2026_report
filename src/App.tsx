@@ -220,10 +220,10 @@ export default function App() {
 
         {/* Analysis Results */}
         <Section title="Результаты анализа" icon={Activity}>
-          <ActionBlock text="Что делаем: готовим библиотеки из 4 образцов для последующего пулирования по 4 в 1 пул и гибридизации, измеряем концентрацию, и фрагментный профиль для каждого образца индивидуально" />
+          <ActionBlock text="ЭТАП 1. Что делаем: готовим библиотеки из 4 образцов для последующего пулирования по 4 в 1 пул и гибридизации, измеряем концентрацию, и фрагментный профиль для каждого образца индивидуально" />
           
           {/* Stage 1 */}
-          <SubSection title="ЭТАП 1. Оценка индивидуальных библиотек после пре-ПЦР перед пулированием (Pre-Capture)" icon={Layers}>
+          <SubSection title="Оценка индивидуальных библиотек после пре-ПЦР перед пулированием (Pre-Capture)" icon={Layers}>
             <p className="text-slate-600 mb-6">
               Анализ 4 независимых библиотек (lib5, lib1#, lib1, lib2) перед объединением в пул.
             </p>
@@ -304,15 +304,15 @@ export default function App() {
             </div>
 
             <HeaderBlock 
-              text="Фрагментный профиль образцов" 
+              text="Фрагментный профиль образцов (использовалась система для капиллярного гель-электрофореза, модель: Qsep 1 plus)" 
               imageUrl="/1.png" 
             />
           </SubSection>
 
-          <ActionBlock text="Что делаем: объединяем 4 образца в 1 пул, концентрируем на частицах, проводим гибридизацию, отмывки и пост-ПЦР, и измеряем концентрацию, и фрагментный профиль готовой библиотеки" />
+          <ActionBlock text="ЭТАП 2. Что делаем: объединяем 4 образца в 1 пул, концентрируем на частицах, проводим гибридизацию, отмывки и пост-ПЦР, и измеряем концентрацию, и фрагментный профиль готовой библиотеки" />
 
           {/* Stage 2 */}
-          <SubSection title="ЭТАП 2. Оценка готового пула (Post-Capture)" icon={Award}>
+          <SubSection title="Оценка готового пула (Post-Capture)" icon={Award}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               <InfoCard label="Вершина пика" value="513 bp" />
               <InfoCard label="Средний размер" value="475 bp" />
@@ -343,7 +343,7 @@ export default function App() {
             </div>
 
             <HeaderBlock 
-              text="Фрагментный профиль итоговой библиотеки без корректировки настроек базовой линии Qsep" 
+              text="Фрагментный профиль итоговой библиотеки без корректировки настроек базовой линии Qsep ((использовалась система для капиллярного гель-электрофореза, модель: Qsep 1 plus)" 
               imageUrl="/2.png"
             />
           </SubSection>
@@ -355,7 +355,7 @@ export default function App() {
             <div className="p-2 bg-emerald-100 rounded-lg text-emerald-700">
               <Activity size={24} />
             </div>
-            Работа с Qsep
+            Важные аспекты работы с системой для капиллярного гель-электрофореза, модель: Qsep 1 plus
           </h2>
         </div>
         <Section title="Нюансы измерения: Перегруз детектора" icon={Info} className="bg-slate-50 border-slate-200">
@@ -433,7 +433,7 @@ export default function App() {
             </div>
 
             <HeaderBlock 
-              text="Фрагментный профиль итоговой библиотеки после корректировки настроек базовой линии Qsep" 
+              text="Фрагментный профиль итоговой библиотеки после корректировки настроек базовой линии Qsep ((использовалась система для капиллярного гель-электрофореза, модель: Qsep 1 plus)" 
               imageUrl="/3.png"
             />
           </div>
@@ -460,7 +460,7 @@ export default function App() {
                 onClick={() => setShowPdfMenu(!showPdfMenu)}
                 className="bg-white text-emerald-700 px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-emerald-50 transition-colors"
               >
-                <FileText size={20} /> ПДФ Отчеты
+                <FileText size={20} /> PDF отчеты
                 {showPdfMenu ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
               </button>
               
@@ -514,6 +514,19 @@ export default function App() {
                 </motion.div>
               )}
             </div>
+          </div>
+
+          <div className="mt-8">
+            <a 
+              href="https://bioline.ru/catalog/molecular-biology/sequencing/ngs-online" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-emerald-400 text-emerald-950 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-emerald-300 transition-all shadow-lg hover:shadow-emerald-400/20 group"
+            >
+              <Award size={24} className="group-hover:scale-110 transition-transform" /> 
+              Каталог Celemics
+              <ArrowRight size={20} />
+            </a>
           </div>
         </motion.div>
       </main>
